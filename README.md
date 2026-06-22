@@ -138,13 +138,8 @@ Summarize the major outcomes of your project, reflect on the research findings, 
 
 ## Contributions
 
-| Team Member  | Contributions                                             |
-|--------------|-----------------------------------------------------------|
-| Alice Smith  | Data collection, preprocessing, model training, evaluation|                                                       |
-| Bob Johnson  | ...                                                       |
-| ...          | ...                                                       |
-
-## References
-
-Include a list of academic and professional sources you cited in your report, using an appropriate citation format to ensure clarity and proper attribution.
+| Team Member       | Contributions                                               |
+|-------------------|-------------------------------------------------------------|
+| Anna-Lena Gensle  | Data collection, preprocessing, model training, evaluation  |                                                       
+| Sebastian Berl    | Data collection, preprocessing, model training, evaluation  |
 
