@@ -48,7 +48,6 @@ To address this question our research questions are the following:
 Since we wanted to compare formal and informal written text for our analysis, we decided to use the following two datasets:
 
 ### Reddit Corpus
-SEBASTIAN
 As a Dataset for our informal written text we used Reddit as our source. We only used Redit threates and discussions in which political subjects were discussed.
 
 ### WSJ Corpus
@@ -69,48 +68,30 @@ After cleaning and tagging the raw text with spaCy, the processed corpus consist
 Our project uses the Python version 3.9.25 . It is mandatory to use this Version specifically since some Packages we used will not run if a newer version is selected. As tokenizer and tagger we used spaCy 3.7.6 with the en_core_web_sm model. In our code we used several packages to analyse our two Data sets, some of them were used to ensure a smoth import of the data like json and others like spacy for analysing purposes. We provided a full overview of all packages and versions in the  `requirements.txt` file. To run our Projekt pleas run the following to commands in your bash
 
 ```bash
-pip install -r installerFile.txt
+pip install -r InstallerFile.txt
 python -m spacy download en_core_web_sm
 ```
 
-###########################
-Our project was coded in the conda-environment "docana" as described in the beginning of the course with Python v.3.9. We used VS Code as IDE and Gitlab for collaborative work. As tokenizer and tagger we used spaCy 3.7.6 with the en_core_web_sm model. To fully take advantage of our Project you should be able to also display .png and .csv files in your Code editor. We recomend using Visual Studio Code.
-
-
-```bash
-conda create --name docana python=3.9
-conda activate docana
-```
-
-```python
-nltp = spacy.load("en_core_web_sm")
-```
-
-SEBASTIAN HILFE WAS MUSS DA REIN?
-Outline the tools, software, and hardware environment, along with configurations used for conducting your experiments. Be sure to document the Python version and other dependencies clearly. Provide step-by-step instructions on how to recreate your environment, ensuring anyone can replicate your setup with ease:
-
-
-
-Include a `requirements.txt` file in your project repository. This file should list all the Python libraries and their versions needed to run the project. Provide instructions on how to install these dependencies using pip, for example:
-
-```bash
-pip install -r requirements.txt
-```
-#############################
 ### Experiments
 
-Report how you conducted the experiments. We suggest including detailed explanations of the preprocessing steps and model training in your project. For the preprocessing, describe  data cleaning, normalization, or transformation steps you applied to prepare the dataset, along with the reasons for choosing these methods. In the section on model training, explain the methodologies and algorithms you used, detail the parameter settings and training protocols, and describe any measures taken to ensure the validity of the models.
+We first started out by cleaning our data, specifically our reddit sample. Therefore we removed all emojis, URL links, markdown-links, HTML entetiesa and specific signs like ": ; ( ) [ ] { } / \ @ # $ % ^ & * - + = < >". After completing this, we formated our data in many different ways and tagged them using spacy to be able to create our distributionmatrixes and frequencydiagramms. 
 
 ### Reddit
-SEBASTIAN
+
 #### Preprocessing
+
+We first chose sutibel discussions on reddit. The discussions should be around a political topic. After this we started cleaning our data as discribed in the Experiments subparagraph.
 
 #### Manual Annotation & Cohen's Kappa
 ANNA
 
 #### Frequency Distribution
 
+To analyse how often a specific tag occures in the dataset we used a Frequency Distribution which we also visualized in a seperate file for each dataset. The main goal her is to get a clearer perspective on differences in the word types used both sampels.
+
 #### Transition Matrix
+
+To ilustrate the likelihood of moving from one language state to another we used a Transition Matrix. This helps us visualize how the Language between our to sampels differ.  
 
 ### WSJ Corpus
 
@@ -145,6 +126,8 @@ for sent in doc.sents:
 #### Frequency distribution
 
 #### Transition Matrix
+
+
 ## Results and Discussion
 
 Present the findings from your experiments, supported by visual or statistical evidence. Discuss how these results address your main research question.
