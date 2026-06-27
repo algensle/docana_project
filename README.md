@@ -149,13 +149,47 @@ To capture patterns between POS tags, we computed a transition matrix for both c
 
 ## Results and Discussion
 ### Frequency Distribution
+
+![WSJ Frequency Distribution](figures/freqdist_wsj_top15.png)
+
+![Reddit Frequency Distribution](figures/freqdist_reddit_top15.png)
+
 Both corpora contain on the most frequent positions singular nouns and prepositions but also determiners. While the WSJ corpus contains more proper nouns and plural nouns the reddit sample contains more adverbs and personal pronouns on the more frequent positions. What stands out is that the WSJ corpus contains a lot more cardinal numbers than the reddit sample while the reddit sample contains interjections and the WSJ corpus barely does. Modal verbs are more frequent in the reddit sample (1.53%) than in the WSJ corpus (0.94%).
 
-So more singular and proper nouns in the WSJ corpus align with a nominal style with high lexical density. More pronouns and modals in the reddit sample align with a verbal style and a more personal address which both fits expected register features. More adverbs in the reddit samples reflect intensified speech which is typical for online-communication. The WSJ contains much more proper nouns and cardinals since its typical in journalistic convention to describe developments, companies and names more specific than it would be in reddit discussions. 
+| POS Tag | WSJ | Reddit |
+|---------|-----|--------|
+| MD (Modal verbs) | 0.94% | 1.53% |
+| PRP (Personal pronouns) | 1.74% | 7.08% |
+| NNP (Proper nouns) | 9.87% | 4.62% |
+| RB (Adverbs) | 3.07% | 7.72% |
+
+So more singular and proper nouns in the WSJ corpus align with a nominal style with high lexical density. More pronouns and modals in the reddit sample align with a verbal style and a more personal address which both fits expected register features. More adverbs in the reddit samples reflect intensified speech which is typical for online-communication. The WSJ contains much more proper nouns and cardinals since it's typical in journalistic convention to describe developments, companies and names more specific than it would be in reddit discussions. 
+However, since the corpora differ considerably in size (98.492 vs. 18.655 tokens), the comparability of the results may be effected by this difference, despite of using relative frequencies.
 To conclude this section, the distributions align with the register features described by Biber & Conrad (2009), the WSJ shows a more nominal style with high lexical density and the Reddit sample a more verbal, more personal style.
 
 ### Transition Probabilities
-The highest transition probabilities in both corpora are from determiner to noun and adjective to noun.What is interesting here is that in the WSJ corpus nouns are more often directly preceded by determiners (0.47) while in the Reddit sample this direct transition is smaller (0.42) and adjectives are more often in between the noun and determiner than in the WSJ, which fits a more descriptive style in the Reddit sample. In the WSJ corpus there are higher transition probabilities from past tense verbs to prepositions and from proper noun to proper noun. This high transition probability from proper noun to proper noun can be explained since there are proper names with several parts for companies or institutions, the high transition from past tense forms to prepositions suggest a more complex syntactic structure. Both characteristics are typical for journalistic writing. In the reddit sample, there are higher transition probabilities from prepositions to determiners and personal pronouns to verbforms in non 3rd person singular. This suggests a more direct, more personal writing style. In the reddit sample the transition probability for verb non 3rd person singular to adverb is also higher while these are not in the top15 tags from WSJ.
+
+![WSJ Transition Matrix](figures/transition_matrix_wsj.png)
+
+![Reddit Transition Matrix](figures/transition_matrix_reddit.png)
+
+The following table highlights the most notable differences in transition probabilities between the two corpora:
+
+| Transition | WSJ | Reddit |
+|------------|-----|--------|
+| DT → NN | 0.47 | 0.42 |
+| NNP → NNP | 0.38 | 0.11 |
+| PRP → VBP | 0.18 | 0.27 |
+
+The highest transition probabilities in both corpora are from determiner to noun and adjective to noun. What is interesting here is that in the WSJ corpus nouns are more often directly preceded by determiners (0.47) while in the Reddit sample this direct transition is smaller (0.42) and adjectives are more often in between the noun and determiner than in the WSJ, which fits a more descriptive style in the Reddit sample. In the WSJ corpus there are higher transition probabilities from past tense verbs to prepositions and from proper noun to proper noun. This high transition probability from proper noun to proper noun can be explained since there are proper names with several parts for companies or institutions, the high transition from past tense forms to prepositions suggest a more complex syntactic structure. Both characteristics are typical for journalistic writing. In the reddit sample, there are higher transition probabilities from prepositions to determiners and personal pronouns to verbforms in non 3rd person singular. This suggests a more direct, more personal writing style. In the reddit sample the transition probability for verb non 3rd person singular to adverb is also higher while these are not in the top15 tags from WSJ.
+
+Overall, the observed differences both in frequency distributions and transition probabilities reflect the register features predicted by Biber & Conrad (2009). The WSJ shows a nominal, institunionally oriented style, which is typical for formal journalism, while the reddit sample shows a more verbal, interpersonal style, which is characteristic of informal online communication.
+
+
+
+
+
+
 
 
 
@@ -167,6 +201,6 @@ Summarize the major outcomes of your project, reflect on the research findings, 
 
 | Team Member       | Contributions                                               |
 |-------------------|-------------------------------------------------------------|
-| Anna-Lena Gensle  | Data collection, preprocessing, model training, evaluation for WSJ corpus, manual annotation reddit |                                                       
-| Sebastian Berl    | Data collection, preprocessing, model training, evaluation for reddit corpus |
+| Anna-Lena Gensle  | WSJ corpus: Data collection, preprocessing, model training, evaluation, manual annotation reddit and Cohen's kappa |                                                       
+| Sebastian Berl    | Reddit Corpus: Data collection, preprocessing, model training, evaluation |
 
