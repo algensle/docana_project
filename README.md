@@ -1,8 +1,4 @@
 
-## Project Report Template
-
-> This repository serves as a template for your project reports as part of the Document Analysis lecture. To set up your project report as a webpage using GitHub Pages, simply follow the steps outlined in the next chapter.
->
 >**Some Organizational Details:** Get creative with your project ideas! Just make sure they relate to Natural Language Processing and incorporate this specified dataset: [Link to data](https://huggingface.co/datasets/webis/tldr-17), [Link to paper](https://aclanthology.org/W17-4508.pdf). Submissions should be made in teams of 2-3 students. Each team is expected to create a blog-style project website, using GitHub Pages, to present their findings. Additionally, teams will deliver a lightning talk during the final lecture to discuss their project. Add all your code, such as Python scripts and Jupyter notebooks, to the `code` folder. Use markdown files for your project report. [Here](https://docs.gitlab.com/ee/user/markdown.html) you can read about how to format Markdown documents. 
 >
 >Have fun working on your project! 🥳
@@ -48,7 +44,7 @@ To address this question our research questions are the following:
 Since we wanted to compare formal and informal written text for our analysis, we decided to use the following two datasets:
 
 ### Reddit Corpus
-As a Dataset for our informal written text we used Reddit as our source. We only used Redit threates and discussions in which political subjects were discussed. 
+As a Dataset for our informal written text we used Reddit as our source. We only used Reddit threates and discussions in which political subjects were discussed. 
 
 FEHLT: Webis-TLDR-17, zahlen wie viele sätze und tokens
 The Amount of tokens in the Reddit sample is:  18655
@@ -185,17 +181,14 @@ The highest transition probabilities in both corpora are from determiner to noun
 
 Overall, the observed differences both in frequency distributions and transition probabilities reflect the register features predicted by Biber & Conrad (2009). The WSJ shows a nominal, institunionally oriented style, which is typical for formal journalism, while the reddit sample shows a more verbal, interpersonal style, which is characteristic of informal online communication.
 
-
-
-
-
-
-
-
-
 ## Conclusion
 
-Summarize the major outcomes of your project, reflect on the research findings, and clearly state the conclusions you've drawn from the study.
+Our goal of this project was to compare the register of informal written text and formal written text, analysing the POS distribution and transition probabilities between the Reddit Corpus (r/politics, r/news) and the Wall Street Journal from the Penn Treebank Project. Both corpora were preprocessed in a similar pipeline and annotated with the same tagger, spaCy, to obtain comparable results. An additional manual evaluation on the Reddit dataset was conducted to account for possible erros of the automatic tagger. Frequency distributions and transition matrices were calculated to measure the different usage of POS tags in both datasets.
+The main findings were that for the frequency distribution, a nominal style for the WSJ corpus could be observed in the POS tag distribution and a verbal style in the Reddit corpus, which aligns with the predictions by Biber & Conrad (2009). The transition matrices showed high NNP to NNP transitions and more complex verb structures for the WSJ corpus while the Reddit corpus showed more PRP to VBP transitions which aligns with a more personal writing style. So both corpora analyses show consistent register specific differences.
+With respect to our research questions, for RQ 1 we can observe clear frequency differences in the POS tag distribution and therefore confirm our first research question. We can confirm our RQ2 as well since the transition matrixes showed different syntactic transition patterns. These findings lead to the third research question, if the observed results reflect the expected register differences. From a result based point of view we can confirm this, as the observed differences align with the register features predicted by Biber & Conrad (2009). Nevertheless, there are several limitations which need to be mentioned:
+The first and probably most important limitation is the corpus size of our datasets. 98.492 WSJ tokens vs. 18.655 Reddit tokens is a notable limitation of our work, despite using relative numbers for the analysis. This should be kept in mind when interpreting the results.
+A second limitation would be that we manually annotated only the Reddit corpus because we expected an reduced performance of the tagger with this dataset, but didn't check the performance on the WSJ corpus, because we expected it to be good. Another limitation would be that the corpora differ in their publishing year and we therefore need to consider change in language over the years since the late 1980s.
+So for a future comparison larger and more even corpora would enhance the comparability. On top, manual annotations for the WSJ could improve the validity of the results and more registers could be compared.
 
 ## Contributions
 
@@ -204,3 +197,12 @@ Summarize the major outcomes of your project, reflect on the research findings, 
 | Anna-Lena Gensle  | WSJ corpus: Data collection, preprocessing, model training, evaluation, manual annotation reddit and Cohen's kappa |                                                       
 | Sebastian Berl    | Reddit Corpus: Data collection, preprocessing, model training, evaluation |
 
+## References
+
+Biber, D., & Conrad, S. (2009). *Register, genre, and style*. Cambridge University Press.
+
+Li, C., & Liu, Y. (2015). Joint POS tagging and text normalization for informal text. In *Proceedings of the Twenty-Fourth International Joint Conference on Artificial Intelligence (IJCAI 2015)* (pp. 1263–1269). https://www.ijcai.org/Proceedings/15/Papers/182.pdf
+
+Marcus, M. P., Santorini, B., & Marcinkiewicz, M. A. (1993). Building a large annotated corpus of English: The Penn Treebank. *Computational Linguistics*, 19(2), 313–330. https://aclanthology.org/J93-2004/
+
+Völske, M., Potthast, M., Syed, S., & Stein, B. (2017). TL;DR: Mining Reddit to learn automatic summarization. In *Proceedings of the Workshop on New Frontiers in Summarization* (pp. 59–63). https://aclanthology.org/W17-4508/
