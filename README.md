@@ -1,7 +1,4 @@
 
->**Some Organizational Details:** Get creative with your project ideas! Just make sure they relate to Natural Language Processing and incorporate this specified dataset: [Link to data](https://huggingface.co/datasets/webis/tldr-17), [Link to paper](https://aclanthology.org/W17-4508.pdf). Submissions should be made in teams of 2-3 students. Each team is expected to create a blog-style project website, using GitHub Pages, to present their findings. Additionally, teams will deliver a lightning talk during the final lecture to discuss their project. Add all your code, such as Python scripts and Jupyter notebooks, to the `code` folder. Use markdown files for your project report. [Here](https://docs.gitlab.com/ee/user/markdown.html) you can read about how to format Markdown documents. 
->
->Have fun working on your project! 🥳
 
 ## Setup The Report Template
 
@@ -25,7 +22,7 @@ _Group members: Anna-Lena Gensle, Sebastian Berl_
 
 ## Introduction
 
-Language strongly varies across contexts, with spoken and written language differing particularly in register and style. Online-communication and journalism are two very different written contexts, although online-communication tends to adapt features of spoken language. Register differ in the situation specific speech variety: while in formal written language a nominal style with high lexical density is common, in informal written language a verbal style with more pronouns and modal verbs is used (Biber & Conrad 2009).  
+Language strongly varies across contexts, with spoken and written language differing particularly in register and style. Online-communication and journalism are two very different written contexts, although online-communication tends to adapt features of spoken language. Register differ in the situation specific speech variety: while in formal written language a nominal style with high lexical density is common, in informal written language a verbal style with more pronouns and modal verbs is used (Biber & Conrad, 2009).  
 NLP models are often trained on formal written texts but used on informal ones which is a well known issue. Part-of-speech (POS) distributions are a measurable feature of these differences.  
 Related work has investigated POS tagging challenges in informal social media text. Li & Liu (2015) have jointly modelled text normalization and POS tagging for Twitter data and found that especially non-standard tokens pose a serious problem for POS tagging accuracy, highlighting the importance to account for register-specific challenges when applying POS taggers to different text types.
 
@@ -49,7 +46,7 @@ As a dataset for our informal written text we used Reddit as our source. We only
 The amount of tokens in the Reddit sample is:  18655, the amount of sentences in the Reddit sample is:  1177 and the average length of sentences is:  15.849617672047579.
 
 ### WSJ Corpus
-The Wall Street Journal (WSJ) corpus is part of the Penn Treebank (Marcus et al. 1993) and consists of journalistic text, covering business, finance and politics. For the project we used the unlabeled version which is available via NLTK:
+The Wall Street Journal (WSJ) corpus is part of the Penn Treebank (Marcus et al., 1993) and consists of journalistic text, covering business, finance and politics. For the project we used the unlabeled version which is available via NLTK:
 ```python
 import nltk
 from nltk.corpus import treebank_raw
