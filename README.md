@@ -44,12 +44,9 @@ To address this question our research questions are the following:
 Since we wanted to compare formal and informal written text for our analysis, we decided to use the following two datasets:
 
 ### Reddit Corpus
-As a Dataset for our informal written text we used Reddit as our source. We only used Reddit threates and discussions in which political subjects were discussed. 
+As a dataset for our informal written text we used Reddit as our source. We only used Reddit threates and discussions in which political subjects were discussed. (link to reddit: https://www.reddit.com/r/PoliticalDiscussion/comments/54nuut/debate_megathread_live_discussion_thread_for_the/?solution=98d3e4135f0437f798d3e4135f0437f7&js_challenge=1&token=7afd7253fec22262ff1c52b1703fe9ec2b2f33fce87e3bbea6a4947a14193de3&jsc_orig_r= )
 
-FEHLT: Webis-TLDR-17, zahlen wie viele sätze und tokens
-The Amount of tokens in the Reddit sample is:  18655
-The Amount of Sentences in the Reddit sample is:  1177
-The Average Length of Sentences is:  15.849617672047579
+The amount of tokens in the Reddit sample is:  18655, the amount of sentences in the Reddit sample is:  1177 and the average length of sentences is:  15.849617672047579.
 
 ### WSJ Corpus
 The Wall Street Journal (WSJ) corpus is part of the Penn Treebank (Marcus et al. 1993) and consists of journalistic text, covering business, finance and politics. For the project we used the unlabeled version which is available via NLTK:
@@ -81,8 +78,6 @@ python -m spacy download en_core_web_sm
 We first chose suitable discussions on reddit. The discussions should be around a political topic.
 
 After choosing suitable subreddit discussions, we started out by cleaning the reddit sample. Therefore we removed all emojis, URL links, markdown-links, HTML entetiesa and specific signs like ": ; ( ) [ ] { } / \ @ # $ % ^ & * - + = < >". After completing this, we formated our data in many different ways and tagged them using spaCy to be able to create our distribution matrixes and frequency diagrams. 
-
-cleaning FUNKTION könnte hier erklärt werden
 
 #### Manual Annotation & Cohen's Kappa
 Since spaCy was primarily trained on formal written texts and the reddit texts are informal, we weren't sure how well the tagger would perform on this data set and if the results were therfore reliable. Hence, we did a manual annotation and evaluated a random sample of 40 sentences using random.seed(42) for reproducibility. The manual tagging was performed in an excel spreadsheet with the Penn Treebank tagset and anotator agreement was evaluated with the Cohen's kappa measure. The results of the manual tagging were the following:
@@ -194,8 +189,8 @@ So for a future comparison larger and more even corpora would enhance the compar
 
 | Team Member       | Contributions                                               |
 |-------------------|-------------------------------------------------------------|
-| Anna-Lena Gensle  | WSJ corpus: Data collection, preprocessing, model training, evaluation, manual annotation reddit and Cohen's kappa |                                                       
-| Sebastian Berl    | Reddit Corpus: Data collection, preprocessing, model training, evaluation |
+| Anna-Lena Gensle  | WSJ corpus: Data collection, preprocessing, corpus analysis, evaluation, manual annotation Reddit and Cohen's kappa |                                                       
+| Sebastian Berl    | Reddit Corpus: Data collection, preprocessing, corpus analysis, evaluation |
 
 ## References
 
@@ -204,5 +199,3 @@ Biber, D., & Conrad, S. (2009). *Register, genre, and style*. Cambridge Universi
 Li, C., & Liu, Y. (2015). Joint POS tagging and text normalization for informal text. In *Proceedings of the Twenty-Fourth International Joint Conference on Artificial Intelligence (IJCAI 2015)* (pp. 1263–1269). https://www.ijcai.org/Proceedings/15/Papers/182.pdf
 
 Marcus, M. P., Santorini, B., & Marcinkiewicz, M. A. (1993). Building a large annotated corpus of English: The Penn Treebank. *Computational Linguistics*, 19(2), 313–330. https://aclanthology.org/J93-2004/
-
-Völske, M., Potthast, M., Syed, S., & Stein, B. (2017). TL;DR: Mining Reddit to learn automatic summarization. In *Proceedings of the Workshop on New Frontiers in Summarization* (pp. 59–63). https://aclanthology.org/W17-4508/
