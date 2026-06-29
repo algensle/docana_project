@@ -1,0 +1,53 @@
+Standard Libraries Python Version 3.9.25.:
+
+| Package                       | Purpose                             |
+| ----------------------------- | ----------------------------------- |
+| `re`                          | Regular expressions / text cleaning |
+| `json`                        | Reading JSON files                  |
+| `csv`                         | CSV export                          |
+| `random`                      | Random sentence sampling            |
+| `collections` (`defaultdict`) | Transition matrix counting          |
+
+
+Third Party Packages:
+| Package      | Imported As         | Purpose                               |
+| ------------ | ------------------- | ------------------------------------- |
+| NLTK         | `nltk`              | Frequency distributions, tokenization |
+| spaCy        | `spacy`             | POS tagging, tokenization             |
+| pandas       | `pd`                | Excel reading, dataframe handling     |
+| scikit-learn | `sklearn`           | Cohen's Kappa calculation             |
+| matplotlib   | `matplotlib.pyplot` | Bar charts                            |
+| NumPy        | `numpy`             | Numerical computations                |
+| seaborn      | `seaborn`           | Heatmap visualization                 |
+
+
+Additional spaCy Model:
+
+| Model            |
+| ---------------- |
+| `en_core_web_sm` |
+
+
+Install this by running the following code in your bash:
+python -m spacy download en_core_web_sm
+
+Versions of the Packages:
+nltk: 3.9.1
+spacy: 3.8.7
+pandas: 2.3.3
+sklearn: 1.5.1
+matplotlib: 3.9.2
+numpy: 1.24.3
+seaborn: 0.13.2
+
+#################################################################################################################################
+#################################################################################################################################
+To install all the Relevant Packages please run the InstallerFile.txt . To do this run in your bash
+
+pip install -r installerFile.txt
+
+After you have done this you also Need to install the spaCy Model we used. You can do this by running the following command in your bash
+
+python -m spacy download en_core_web_sm
+
+
