@@ -1,21 +1,3 @@
-
-
-## Setup The Report Template
-
-Follow this steps to set up your project report:
-
-1. **Fork the Repository:** Begin by creating a copy of this repository for your own use. Click the `Fork` button at the top right corner of this page to do this.
-
-2. **Configure GitHub Pages:** Navigate to `Settings` -> `Pages` in your newly forked repository. Under the `Branch` section, change from `None` to `master` and then click `Save`.
-
-3. **Customize Configuration:** Modify the `_config.yml` file within your repository to personalize your site. Update the `title:` to reflect the title of your project and adjust the `description:` to provide a brief summary.
-
-4. **Start Writing:** Start writing your report by modifying the `README.md`. You can also add new Markdown files for additional pages by modifying the `_config.yml` file. Use the standard [GitHub Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) for formatting. 
-
-5. **Access Your Site:** Return to `Settings` -> `Pages` in your repository to find the URL to your live site. It typically takes a few minutes for GitHub Pages to build and publish your site after updates. The URL to access your live site follows this schema: `https://<<username>>.github.io/<<repository_name>>/`
-
-***
-
 # Register Variation in Peer Discussions vs. News Articles
 
 _Group members: Anna-Lena Gensle, Sebastian Berl_
@@ -41,9 +23,9 @@ To address this question our research questions are the following:
 Since we wanted to compare formal and informal written text for our analysis, we decided to use the following two datasets:
 
 ### Reddit Corpus
-As a dataset for our informal written text we used Reddit as our source. We only used Reddit threates and discussions in which political subjects were discussed. (link to reddit: https://www.reddit.com/r/PoliticalDiscussion/comments/54nuut/debate_megathread_live_discussion_thread_for_the/?solution=98d3e4135f0437f798d3e4135f0437f7&js_challenge=1&token=7afd7253fec22262ff1c52b1703fe9ec2b2f33fce87e3bbea6a4947a14193de3&jsc_orig_r= )
+As a dataset for our informal written text we used Reddit as our source. We only used Reddit threates and discussions in which political subjects were discussed. [Reddit - 2016 Presidential Debate Discussion](https://www.reddit.com/r/PoliticalDiscussion/comments/54nuut/debate_megathread_live_discussion_thread_for_the/)
 
-The amount of tokens in the Reddit sample is:  18655, the amount of sentences in the Reddit sample is:  1177 and the average length of sentences is:  15.849617672047579.
+The amount of tokens in the Reddit sample is  18.655, the amount of sentences in the Reddit sample is  1.177.
 
 ### WSJ Corpus
 The Wall Street Journal (WSJ) corpus is part of the Penn Treebank (Marcus et al., 1993) and consists of journalistic text, covering business, finance and politics. For the project we used the unlabeled version which is available via NLTK:
@@ -79,7 +61,7 @@ After choosing suitable subreddit discussions, we started out by cleaning the re
 #### Manual Annotation & Cohen's Kappa
 Since spaCy was primarily trained on formal written texts and the reddit texts are informal, we weren't sure how well the tagger would perform on this data set and if the results were therfore reliable. Hence, we did a manual annotation and evaluated a random sample of 40 sentences using random.seed(42) for reproducibility. The manual tagging was performed in an excel spreadsheet with the Penn Treebank tagset and anotator agreement was evaluated with the Cohen's kappa measure. The results of the manual tagging were the following:
 
-The initial Cohen's Kappa was 0.9888, the gold standard, so the maximum possible value, is 1.0 . So overall, we saw a good performance except for some internet specific interjections which were labeled as proper nouns like "lmao". But what came to our attention were several tokenization errors especially for abbreviated verb forms like "I'll". Therefore we decided to differentiate between tokenization errors and tagging errors which lead to a cleaned Cohen's Kappa of 0.991 and a proportion of tokenization errors of 0.8%
+The initial Cohen's Kappa was 0.9888, the gold standard, so the maximum possible value, is 1.0 . So overall, we saw a good performance except for some internet specific interjections which were labeled as proper nouns like "lmao". But what came to our attention were several tokenization errors especially for abbreviated verb forms like "I'll". Therefore we decided to differentiate between tokenization errors and tagging errors which lead to a cleaned Cohen's Kappa of 0.991 and a proportion of tokenization errors of 0.8%.
 
 Tokenization Errors:
 
@@ -176,7 +158,9 @@ Overall, the observed differences both in frequency distributions and transition
 ## Conclusion
 
 Our goal of this project was to compare the register of informal written text and formal written text, analysing the POS distribution and transition probabilities between the Reddit Corpus and the Wall Street Journal from the Penn Treebank Project. Both corpora were preprocessed in a similar pipeline and annotated with the same tagger, spaCy, to obtain comparable results. An additional manual evaluation on the Reddit dataset was conducted to account for possible erros of the automatic tagger. Frequency distributions and transition matrices were calculated to measure the different usage of POS tags in both datasets.
+
 The main findings were that for the frequency distribution, a nominal style for the WSJ corpus could be observed in the POS tag distribution and a verbal style in the Reddit corpus, which aligns with the predictions by Biber & Conrad (2009). The transition matrices showed high NNP to NNP transitions and more complex verb structures for the WSJ corpus while the Reddit corpus showed more PRP to VBP transitions which aligns with a more personal writing style. So both corpora analyses show consistent register specific differences.
+
 With respect to our research questions, for RQ 1 we can observe clear frequency differences in the POS tag distribution and therefore confirm our first research question. We can confirm our RQ2 as well since the transition matrixes showed different syntactic transition patterns. These findings lead to the third research question, if the observed results reflect the expected register differences. From a result based point of view we can confirm this, as the observed differences align with the register features predicted by Biber & Conrad (2009). Nevertheless, there are several limitations which need to be mentioned:
 The first and probably most important limitation is the corpus size of our datasets. 98.492 WSJ tokens vs. 18.655 Reddit tokens is a notable limitation of our work, despite using relative numbers for the analysis. This should be kept in mind when interpreting the results.
 A second limitation would be that we manually annotated only the Reddit corpus because we expected an reduced performance of the tagger with this dataset, but didn't check the performance on the WSJ corpus, because we expected it to be good. Another limitation would be that the corpora differ in their publishing year and we therefore need to consider change in language over the years since the late 1980s.
