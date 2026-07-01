@@ -42,12 +42,7 @@ After cleaning and tagging the raw text with spaCy, the processed corpus consist
 
 ### Setup 
 
-Our project uses the Python version 3.9.25 . It is mandatory to use this version specifically since some packages we used will not run if a newer version is selected. As tokenizer and tagger we used spaCy 3.7.6 with the en_core_web_sm model. In our code we used several packages to analyse our two data sets, some of them were used to ensure a smooth import of the data like json and others like spaCy for analysing purposes. We provided a full overview of all packages and versions in the  `requirements.txt` file. To run our project please run the following to commands in your bash
-
-```bash
-pip install -r InstallerFile.txt
-python -m spacy download en_core_web_sm
-```
+Our project uses the Python version 3.9.25 . It is mandatory to use this version specifically since some packages we used will not run if a newer version is selected. As tokenizer and tagger we used spaCy 3.7.6 with the en_core_web_sm model. In our code we used several packages to analyse our two data sets, some of them were used to ensure a smooth import of the data like json and others like spaCy for analysing purposes. We provided a full overview of all packages and versions in the  `requirements.txt` file. 
 
 ### Experiments
 
