@@ -39,15 +39,3 @@ sklearn: 1.5.1
 matplotlib: 3.9.2
 numpy: 1.24.3
 seaborn: 0.13.2
-
-#################################################################################################################################
-#################################################################################################################################
-To install all the Relevant Packages please run the InstallerFile.txt . To do this run in your bash
-
-pip install -r installerFile.txt
-
-After you have done this you also Need to install the spaCy Model we used. You can do this by running the following command in your bash
-
-python -m spacy download en_core_web_sm
-
-
